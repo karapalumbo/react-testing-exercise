@@ -4,12 +4,12 @@ import Carousel from "./Carousel";
 
 
 it("renders without breaking", function() {
-  render(<Carousel/>);
+  render(<Carousel />);
 });
 
 
 it("matches snapshot", function() {
-  const {asFragment} = render(<Carousel />);
+  const { asFragment } = render(<Carousel />);
   expect(asFragment()).toMatchSnapshot();
 });
 
@@ -40,7 +40,7 @@ it("hides and shows arrows", function() {
   expect(rightArrow).not.toHaveClass("hidden");
   expect(leftArrow).toHaveClass("hidden");
   
-  // expect left and right arrows to show 
+  // expect left and right arrows to show
   fireEvent.click(getByTestId("right-arrow"));
   expect(rightArrow).not.toHaveClass("hidden");
   expect(leftArrow).not.toHaveClass("hidden");
